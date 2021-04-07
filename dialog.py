@@ -2,6 +2,7 @@ import sys
 
 from PyQt5.QtWidgets import QApplication, QDialog, QDialogButtonBox, QFormLayout, QLineEdit, QVBoxLayout
 
+
 class Dialog(QDialog):
 	def __init__(self, parent=None):
 		super().__init__(parent)
@@ -18,12 +19,13 @@ class Dialog(QDialog):
 
 		dialogLayout.addLayout(formLayout)
 
-		buttons	= QDialogButtonBox()
+		buttons = QDialogButtonBox()
 		buttons.setStandardButtons(QDialogButtonBox.Cancel | QDialogButtonBox.Ok)
 
 		dialogLayout.addWidget(buttons)
 
 		self.setLayout(dialogLayout)
+
 
 if __name__ == '__main__':
 	app = QApplication(sys.argv)
